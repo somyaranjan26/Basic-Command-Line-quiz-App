@@ -1,4 +1,5 @@
 from Banner import banner
+from Start_Page import *
 
 begi_level = "Beginner Level"
 basic_level = "Basic Level"
@@ -111,7 +112,14 @@ def q_n_a():
     for q in quiz_questions:
         print("\tYour answer is: {}\n".format(str(get_answer(q[0], q[1]))))
     print("\n\tYour SCORE: {}".format(result))
-    print("\n\tHOPE U ENJOYED! :-)")
+    print("\n\tHOPE U ENJOYED! :-)\n")
+    g = input("1.Login Page:/2.Restart quiz:/{3-9}Exit :\n") 
+    if g=="1":
+        start_quiz()
+    elif g=="2":
+         q_n_a()
+    else:
+        print("Exit")
 
 
 if __name__ == '__main__':
